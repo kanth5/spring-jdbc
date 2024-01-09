@@ -36,10 +36,14 @@ public class TennisPlayerApplication implements CommandLineRunner {
 		logger.info("Players with Id 4: {}", dao.getPlayerById(4));
 
 		//Deleting a player
-		logger.info("Deleting Player with Id 2: {}", dao.deletePlayerById(2));
+		logger.info("Deleting Player with Id 3: {}", dao.deletePlayerById(3));
 		logger.info("All Players Data: {}", dao.getAllPlayers());
 
+		//Creating a table
 		logger.info("Creating a new table: {}", dao.createTournamentTable());
+
+		//Custom row mapper
+		logger.info("French Players: {}", dao.getPlayerByNationality("France"));
 
 	}
 }
